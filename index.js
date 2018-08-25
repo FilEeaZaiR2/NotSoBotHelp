@@ -26,7 +26,7 @@ function game4(){
 };
 
 //Login + connexion du bot :
-client.login('NDgyNjU5NDA5MzAyOTEzMDUz.DmIHVA.8J94ll1ymXnBB6l-sAQ2UJ7uvjM');
+client.login(process.env.TOKEN);
 
 client.on("ready", () => {
     console.log("Connexion en cours ...");
