@@ -102,12 +102,7 @@ client.on(`message`, message =>{
         \n8. ASCII                : .ascii <text>
         \n9. Image to ASCII       : .iascii <image>
         \n10. GIF to ASCII        : .gascii <gif> <liquid_rescale>
-        \n11. RIP Generator       : .rip <text> <text2>
-        \n12. Urban Dictionary    : .urban <word>
-        \n13. Triggered GIF       : .triggered <image>
-          1. Triggered Image    : .triggered2 <image>
-          2. Triggered2 Image   : .triggered3 <image>
-        \n14. Resize Image        : .resize <1-8/size> <image>`)
+        \n11. RIP Generator       : .rip <text> <text2>`)
         .setFooter(`Commande d'aide catégorie "Fun" - By FilEeaZaiR`)
         .setTimestamp()
         message.channel.send(help_embed);
@@ -118,28 +113,31 @@ client.on(`message`, message =>{
         .setTitle(`Besoin d'aide ?`)
         .setThumbnail(message.author.avatarURL)
         .addField(`:tools: Voici les commandes de "Fun" du bot "NotSoBot"\n\n`, 
-        `-- You can split top and bottom text using a | divider.
+        `\n12. Urban Dictionary    : .urban <word>
+        \n13. Triggered GIF       : .triggered <image>
+          1. Triggered Image    : .triggered2 <image>
+          2. Triggered2 Image   : .triggered3 <image>
+        \n14. Resize Image        : .resize <1-8/size> <image>-- You can split top and bottom text using a | divider.
         \n15. Meme                : .meme <image> <top_text> <bottom_text>
         \n16. Reverse Text        : .reverse/r <text>
         \n17. Identify Image/Gif  : .identify <url>
-        \n18. Merge Images        : .merge <images (>= 2)>
-        \n\n-- <text> argument IS required.
+        \n18. Merge Images        : .merge <images (>= 2)>`)
+        .setFooter(`Commande d'aide catégorie "Fun" - By FilEeaZaiR`)
+        .setTimestamp()
+        message.channel.send(help_embed);
+    }
+    if(message.content === prefix + "fun") {
+        var help_embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTitle(`Besoin d'aide ?`)
+        .setThumbnail(message.author.avatarURL)
+        .addField(`:tools: Voici les commandes de "Fun" du bot "NotSoBot"\n\n`, 
+        `\n\n-- <text> argument IS required.
         \n19. Turn Text into      : .emojify/efy <background (default: 😂)> <foreground (default: 🅱)> <text> emojis
             1. Vertical Emoji   : .emojify vertical/v same args Arrangement
         \n20. Tone of Text        : .tone/toe <text>
         \n21. Huge Discord Emoji/ : .e/emoji <:emoji(s):> (if > 1, emojis merge) <ios/emojione>* (type of emoji) <size|10-2048> Twitch/Frankerz
-        \n22. Steam Emoji         : .se/steamemoji <:steam_emoji:>`)
-        .setFooter(`Commande d'aide catégorie "Fun" - By FilEeaZaiR`)
-        .setTimestamp()
-        message.channel.send(help_embed);
-    }
-    if(message.content === prefix + "fun") {
-        var help_embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setTitle(`Besoin d'aide ?`)
-        .setThumbnail(message.author.avatarURL)
-        .addField(`:tools: Voici les commandes de "Fun" du bot "NotSoBot"\n\n`, 
-        `23. Add eyes to a face  : .eyes <image-face>
+        \n22. Steam Emoji         : .se/steamemoji <:steam_emoji:>23. Add eyes to a face  : .eyes <image-face>
         1. Spongebob : .eyes spongebob <image-face>
         2. Big Eye : .eyes big <image-face>
         3. Small Eye : .eyes small <image-face>
@@ -154,33 +152,9 @@ client.on(`message`, message =>{
         .setColor('RANDOM')
         .setTitle(`Besoin d'aide ?`)
         .setThumbnail(message.author.avatarURL)
-        .addField(`:tools: Voici une autre parti des commandes de "Fun" du bot "NotSoBot"\n\n`,
-        `6. Horror : .eyes horror <image-face>
-        7. Illuminati : .eyes illuminati <image-face>
-        8. Googly : .eyes googly <image-face>
-        9. Flipped : .eyes flip/reverse <image-face>
-        10. Center : .eyes center <image-face>
-        11. Red Flare : .eyes red <image-face>
-        12. Blue Flare : .eyes blue <image-face>
-        13. Green Flare : .eyes green <image-face>
-        14. Yellow Flare : .eyes yellow <image-face>`)
-        .addField(`:tools: Voici une autre parti des commandes de "Fun" du bot "NotSoBot"\n\n`,
-        `15. Pink Flare : .eyes pink <image-face>
-        16. White Flare : .eyes white <image-face>
-        17. Black Flare : .eyes black <image-face>
-        18. Fidget Spinner : .eyes spinner <image-face>`)
-        .setFooter(`Commande d'aide catégorie "Fun" - By FilEeaZaiR`)
-        .setTimestamp()
-        message.channel.send(help_embed);
-    }
-    if(message.content === prefix + "fun") {
-        var help_embed = new Discord.RichEmbed()
-        .setColor('RANDOM')
-        .setTitle(`Besoin d'aide ?`)
-        .setThumbnail(message.author.avatarURL)
         .addField(`:tools: Voici les commandes de "Fun" du bot "NotSoBot"\n\n`, 
         `24. Word Cloud          : .wordcloud/wc <max_messages>* <image (custom mask)>
-        25. Watermark           : .watermark <image> <watermark_image>*
+        25. Watermark           : .watermark <image> <watermark_image>
         -- Aliases can be accesed by removing "say".
         26. Cow                 : .cowsay <text>
           1. Mech               : .mechsay <text>
@@ -192,8 +166,18 @@ client.on(`message`, message =>{
           7. Moofasa            : .moofasasay <text>
           8. Sodomized Sheep    : .sodomizedsheepsay <text>
           9. Bong               : .bongsay <text>
-          10. Beavis            : .beavissay <text>
-          11. Tux               : .tuxsay <text>
+          10. Beavis            : .beavissay <text>`)
+        .setFooter(`Commande d'aide catégorie "Fun" - By FilEeaZaiR`)
+        .setTimestamp()
+        message.channel.send(help_embed);
+    }
+    if(message.content === prefix + "fun") {
+        var help_embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTitle(`Besoin d'aide ?`)
+        .setThumbnail(message.author.avatarURL)
+        .addField(`:tools: Voici les commandes de "Fun" du bot "NotSoBot"\n\n`, 
+        ` 11. Tux               : .tuxsay <text>
           12. Duck              : .ducksay <text>
           13. Elephant          : .elephantsay <text>
           14. Eyes              : .eyessay <text>
@@ -214,17 +198,7 @@ client.on(`message`, message =>{
         .setTitle(`Besoin d'aide ?`)
         .setThumbnail(message.author.avatarURL)
         .addField(`:tools: Voici les commandes de "Fun" du bot "NotSoBot"\n\n`, 
-        ` 27. Giphy Gif           : .gif <text/query>
-        28. Imgur Image/Gallery : .imgur <text/query>
-        29. Glitch an Image     : .glitch <gif> or <image> <amount> <seed> <iterations>
-          1. Glitch 2           : .glitch2 <image>
-        30. Pixelsort an Image  : .sort <image> <interval_function (random, threshold, edges, waves, none)> <pixel_angle>
-        31. NeedsMoreJpeg       : .jpeg/magik2 <image> <quality|1-10>
-        32. Pixelate            : .pixel <image> <pixels>
-        33. Retro               : .retro <text (split each line by '|')>
-        34. Retro 2             : .retro2 <text (split each line by '|')>
-        35. Retro 3             : .retro3 <text (split each line by '|')>
-        36. WaaW                : .waaw <image>
+        `36. WaaW                : .waaw <image>
         37. HaaH                : .haah <image>
         38. WooW                : .woow <image>
         39. HooH                : .hooh <image>
@@ -236,8 +210,18 @@ client.on(`message`, message =>{
         45. 4Chan Green Text    : .green <text>
         46. Rainbow             : .rainbow <image>
         47. Waves               : .wave <image>
-        48. Wall                : .wall <image>
-        49. Rotate              : .rotate <degree> <image>
+        48. Wall                : .wall <image>`)
+        .setFooter(`Commande d'aide catégorie "Fun" - By FilEeaZaiR`)
+        .setTimestamp()
+        message.channel.send(help_embed);
+    }
+    if(message.content === prefix + "fun") {
+        var help_embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTitle(`Besoin d'aide ?`)
+        .setThumbnail(message.author.avatarURL)
+        .addField(`:tools: Voici les commandes de "Fun" du bot "NotSoBot"\n\n`, 
+        `49. Rotate              : .rotate <degree> <image>
         50. Layer               : .layer <image>
         51. Multiply            : .multiply/multi <image>
         52. Multiply and Rotate : .multiply2/multi2 <image>
@@ -268,8 +252,18 @@ client.on(`message`, message =>{
         66. Swirl               : .swirl <image>
         67. Side To Side        : .ss/s2s <image>
         68. Up To Down          : .utd/u2d <image>
-        69. Recolor             : .recolor <image>
-        -- Poorly trained Neural Network Model (Nothing really NSFW).
+        69. Recolor             : .recolor <image>`)
+        .setFooter(`Commande d'aide catégorie "Fun" - By FilEeaZaiR`)
+        .setTimestamp()
+        message.channel.send(help_embed);
+    }
+    if(message.content === prefix + "fun") {
+        var help_embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTitle(`Besoin d'aide ?`)
+        .setThumbnail(message.author.avatarURL)
+        .addField(`:tools: Voici les commandes de "Fun" du bot "NotSoBot"\n\n`, 
+        `-- Poorly trained Neural Network Model (Nothing really NSFW).
         70. Edges2Porn (NSFW)   : .edges2porn/e2p <image>
           1. Gif                : .gedges2porn/ge2p <gif>
         71. Sharpen             : .sharpen <image>
@@ -302,8 +296,18 @@ client.on(`message`, message =>{
         87. Wave / Hot 2        : .hot2 <image-face>
         88. Beard / Pan         : .beard/pan <image-face>
         89. Hitman              : .hitman/hit <image-face>
-        90. Heisenberg          : .heisenberg/walter/ww <image-face> (Breaking Bad)
-        91. Glasses             : .glasses <image-face>
+        90. Heisenberg          : .heisenberg/walter/ww <image-face> (Breaking Bad)`)
+        .setFooter(`Commande d'aide catégorie "Fun"' - By FilEeaZaiR`)
+        .setTimestamp()
+        message.channel.send(help_embed);
+    }
+    if(message.content === prefix + "fun") {
+        var help_embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTitle(`Besoin d'aide ?`)
+        .setThumbnail(message.author.avatarURL)
+        .addField(`:tools: Voici les commandes de "Fun" du bot "NotSoBot"\n\n`, 
+        `91. Glasses             : .glasses <image-face>
         92. Hipster             : .hipster/hip <image-face>
         93. Impression          : .impression/imp <image-face>
         94. Makeup              : .makeup <image-face>
@@ -335,8 +339,18 @@ client.on(`message`, message =>{
         110. Composite Images   : .composite <images (limit 20)>
         111. Disabled           : .disabled <image>
         112. Kekistan           : .kekistan/kekflag <image>
-        113. Watchmojo          : .watchmojo/mojo <image> <text>
-        114. Snapchat Dog       : .snapchat/sc <image-face>
+        113. Watchmojo          : .watchmojo/mojo <image> <text>`)
+        .setFooter(`Commande d'aide catégorie "Fun" - By FilEeaZaiR`)
+        .setTimestamp()
+        message.channel.send(help_embed);
+    }
+    if(message.content === prefix + "fun") {
+        var help_embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTitle(`Besoin d'aide ?`)
+        .setThumbnail(message.author.avatarURL)
+        .addField(`:tools: Voici les commandes de "Fun" du bot "NotSoBot"\n\n`, 
+        `114. Snapchat Dog       : .snapchat/sc <image-face>
           1. Dog 2              : .snapchat dog2/d2 <image-face>
           2. Cat                : .snapchat cat/c <image-face>
           3. Cat 2              : .snapchat cat2/c2 <image-face>
@@ -397,8 +411,18 @@ client.on(`message`, message =>{
         139. Bandicam           : .bandicam/bandi <image>
         140. Condom Fails       : .condomfail/condom <image>
         141. Depression         : .depression/depr <image>
-        142. Hacker             : .hacker <text>
-        143. Gold Star          : .goldstar/star <image>
+        142. Hacker             : .hacker <text>`)
+        .setFooter(`Commande d'aide catégorie "Fun" - By FilEeaZaiR`)
+        .setTimestamp()
+        message.channel.send(help_embed);
+    }
+    if(message.content === prefix + "fun") {
+        var help_embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTitle(`Besoin d'aide ?`)
+        .setThumbnail(message.author.avatarURL)
+        .addField(`:tools: Voici les commandes de "Fun" du bot "NotSoBot"\n\n`, 
+        `143. Gold Star          : .goldstar/star <image>
         144. Hyper Cam          : .hypercam/hcam <image>
         145. Challange          : .jackoff/challenge <image>
         146. Keemstar           : .keemstar/keem <image>
@@ -430,8 +454,18 @@ client.on(`message`, message =>{
         160. Thug Life          : .thug/thuglife <image-face>
         161. Crop/Zoom Face     : .zoom <image-face>
         162. Race Recognition   : .races/kairos <image-face>
-        163. Gimp Resize Error  : .gimp <image>
-        164. Transgender Flag   : .trans <image>
+        163. Gimp Resize Error  : .gimp <image>`)
+        .setFooter(`Commande d'aide catégorie "Fun" - By FilEeaZaiR`)
+        .setTimestamp()
+        message.channel.send(help_embed);
+    }
+    if(message.content === prefix + "fun") {
+        var help_embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTitle(`Besoin d'aide ?`)
+        .setThumbnail(message.author.avatarURL)
+        .addField(`:tools: Voici les commandes de "Fun" du bot "NotSoBot"\n\n`, 
+        `164. Transgender Flag   : .trans <image>
         165. Sonic              : .sonic <text>
         166. NotSoBot Face      : .notsobot/nsb <image-face>
         167. Zalgo              : .zalgo <text>
@@ -440,7 +474,18 @@ client.on(`message`, message =>{
         170. Joy Face           : .joy <image-face>
         171. Ajit Pai           : .ajit <image>
         172. Jack               : .jack <image>
-        173. Israel Flag        : .israel <image>
+        173. Israel Flag        : .israel <image>`)
+        .setFooter(`Commande d'aide catégorie "Fun" - By FilEeaZaiR`)
+        .setTimestamp()
+        message.channel.send(help_embed);
+    }
+    if(message.content === prefix + "fun") {
+        var help_embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTitle(`Besoin d'aide ?`)
+        .setThumbnail(message.author.avatarURL)
+        .addField(`:tools: Voici les commandes de "Fun" du bot "NotSoBot"\n\n`, 
+        `173. Israel Flag        : .israel <image>
         174. Logan Paul         : .logan <image>
         175. Gif Deep Fry       : .gdeepfy/gdf <gif>
         176. Trump              : .trump <image>
@@ -464,8 +509,7 @@ client.on(`message`, message =>{
         .setTitle(`Besoin d'aide ?`)
         .setThumbnail(message.author.avatarURL)
         .addField(`:tools: Voici les commandes de "Fun" du bot "NotSoBot"\n\n`, 
-        `-- Create a discord message screenshot.
-        -- Use flags such as "-compact" or "-light" to change the theme.
+        `-- Use flags such as "-compact" or "-light" to change the theme.
         187. Quote              : .quote <user-mention/id>* <text>
           1. Message            : .quote id <message_id>
           -- Last 100 messages
@@ -522,8 +566,18 @@ client.on(`message`, message =>{
              Faces
         210. Galatea of the     : .spheres/galatea <image>
              Spheres
-        211. Museum Frame       : .museum <image>
-        212. Burning Photo      : .burn <image>
+        211. Museum Frame       : .museum <image>`)
+        .setFooter(`Commande d'aide catégorie "Fun" - By FilEeaZaiR`)
+        .setTimestamp()
+        message.channel.send(help_embed);
+    }
+    if(message.content === prefix + "fun") {
+        var help_embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTitle(`Besoin d'aide ?`)
+        .setThumbnail(message.author.avatarURL)
+        .addField(`:tools: Voici les commandes de "Fun" du bot "NotSoBot"\n\n`, 
+        `212. Burning Photo      : .burn <image>
         213. Pop Art (2 x 2)    : .popart/pop <image>
         -- Removes transparent body surrounding image.
         214. Center Image       : .center <image>
@@ -548,8 +602,18 @@ client.on(`message`, message =>{
           3. Swirl              : .fm swirl <image-face>
           4. Circular/Radial    : .fm circle/radial <image-face>
               Blur
-          5. Blur               : .fm blur <image-face>
-          6. Charcoal           : .fm charcoal/coal <image-face>
+          5. Blur               : .fm blur <image-face>`)
+        .setFooter(`Commande d'aide catégorie "Fun" - By FilEeaZaiR`)
+        .setTimestamp()
+        message.channel.send(help_embed);
+    }
+    if(message.content === prefix + "fun") {
+        var help_embed = new Discord.RichEmbed()
+        .setColor('RANDOM')
+        .setTitle(`Besoin d'aide ?`)
+        .setThumbnail(message.author.avatarURL)
+        .addField(`:tools: Voici les commandes de "Fun" du bot "NotSoBot"\n\n`, 
+        `6. Charcoal           : .fm charcoal/coal <image-face>
           7. Tehi               : .fm tehi <image-face>
           8. Pixelate           : .fm pixelate/pixel <image-face>
           9. Spin - Random Hues : .fm spin <image-face>
