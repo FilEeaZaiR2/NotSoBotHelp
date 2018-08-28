@@ -59,7 +59,7 @@ client.on(`message`, message =>{
         message.channel.send(help_embed);
     }
 
-    if(message.content === prefix + "tags") {
+    if(message.content === prefix + "tags" || message.content === "#") {
         var help_embed = new Discord.RichEmbed()
         .setColor('RANDOM')
         .setTitle(`Besoin d'aide ?`)
